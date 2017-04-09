@@ -8,14 +8,14 @@ import org.w3c.dom.NodeList;
 import org.w3c.dom.Node;
 import org.w3c.dom.Element;
 
-public class App {
+public class DocumentBuilderApp {
     public static void main(String[] args){
 
         try {
             File inputFile = new File("C:\\Users\\Kacper\\IdeaProjects\\untitled\\books.xml");
             DocumentBuilderFactory dbFactory
                     = DocumentBuilderFactory.newInstance();
-            DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+            javax.xml.parsers.DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document doc = dBuilder.parse(inputFile);
             doc.getDocumentElement().normalize();
             System.out.println("Root element :"
